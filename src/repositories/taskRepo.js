@@ -10,3 +10,7 @@ export async function create(data) {
     data,
   });
 }
+
+export async function findAll(filter = {}) {
+  return prisma.task.findMany({ where: filter });
+}
